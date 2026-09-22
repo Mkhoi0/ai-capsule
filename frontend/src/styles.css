@@ -1,0 +1,271 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  background: #0f1115;
+  color: #e6e6e6;
+}
+
+.loading {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  color: #9aa0ab;
+}
+
+/* Landing page */
+.landing {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  padding: 1rem;
+}
+
+.landing-card {
+  background: #1a1d24;
+  padding: 2.5rem;
+  border-radius: 12px;
+  max-width: 480px;
+  text-align: center;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.3);
+}
+
+.landing-card h1 {
+  margin: 0 0 1rem;
+}
+
+.landing-card p {
+  color: #c4c9d2;
+  line-height: 1.5;
+  margin-bottom: 1.5rem;
+}
+
+.btn-github {
+  display: inline-block;
+  background: #24292e;
+  color: white;
+  padding: 0.7rem 1.4rem;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+/* Dashboard */
+.dashboard {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 1.5rem;
+}
+
+.dashboard-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1.5rem;
+}
+
+.btn-logout {
+  color: #9aa0ab;
+  text-decoration: none;
+  font-size: 0.85rem;
+  border: 1px solid #2c313c;
+  padding: 0.4rem 0.8rem;
+  border-radius: 8px;
+}
+
+.dashboard-toolbar {
+  margin-bottom: 1.5rem;
+}
+
+button {
+  cursor: pointer;
+  border: none;
+  border-radius: 8px;
+  padding: 0.55rem 0.9rem;
+  font-size: 0.85rem;
+  background: #3b82f6;
+  color: white;
+  font-weight: 600;
+}
+
+button.secondary {
+  background: #2c313c;
+}
+
+button.danger {
+  background: #ef4444;
+}
+
+.error-banner {
+  background: #2a1418;
+  border: 1px solid #7f1d1d;
+  color: #fca5a5;
+  padding: 0.6rem 0.8rem;
+  border-radius: 8px;
+  margin-bottom: 1rem;
+  font-size: 0.85rem;
+}
+
+.capsule-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 1rem;
+}
+
+.capsule-card {
+  background: #1a1d24;
+  border-radius: 12px;
+  padding: 1rem;
+  border: 1px solid #262a33;
+}
+
+.capsule-card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 0.5rem;
+}
+
+.capsule-card-header h3 {
+  margin: 0 0 0.15rem;
+  font-size: 1rem;
+}
+
+.capsule-meta {
+  color: #7d8590;
+  font-size: 0.75rem;
+}
+
+.capsule-card-actions {
+  display: flex;
+  gap: 0.35rem;
+  flex-shrink: 0;
+}
+
+.capsule-card-actions button {
+  padding: 0.3rem 0.5rem;
+  font-size: 0.75rem;
+}
+
+.capsule-text,
+.capsule-summary,
+.capsule-notes {
+  color: #c4c9d2;
+  font-size: 0.85rem;
+  white-space: pre-wrap;
+  margin: 0.6rem 0;
+}
+
+.tag-list {
+  display: flex;
+  gap: 0.4rem;
+  flex-wrap: wrap;
+  margin: 0.5rem 0;
+}
+
+.tag {
+  background: #23283a;
+  color: #93c5fd;
+  padding: 0.15rem 0.5rem;
+  border-radius: 999px;
+  font-size: 0.7rem;
+}
+
+.tag-good {
+  background: #14301f;
+  color: #86efac;
+}
+
+.screenshot-link {
+  display: inline-block;
+  color: #3b82f6;
+  font-size: 0.8rem;
+  margin-top: 0.3rem;
+}
+
+.empty-state {
+  color: #6b7280;
+}
+
+/* Form / modal */
+.modal-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.6);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem;
+  z-index: 10;
+  overflow-y: auto;
+}
+
+.modal {
+  background: #1a1d24;
+  border-radius: 12px;
+  padding: 1.5rem;
+  width: 100%;
+  max-width: 520px;
+  max-height: 90vh;
+  overflow-y: auto;
+}
+
+.modal h2 {
+  margin-top: 0;
+}
+
+.capsule-form label {
+  display: block;
+  margin-bottom: 0.8rem;
+  font-size: 0.8rem;
+  color: #c4c9d2;
+}
+
+.capsule-form input,
+.capsule-form textarea,
+.capsule-form select {
+  width: 100%;
+  margin-top: 0.3rem;
+  padding: 0.5rem 0.7rem;
+  border-radius: 8px;
+  border: 1px solid #2c313c;
+  background: #12141a;
+  color: #e6e6e6;
+  font-size: 0.85rem;
+  font-family: inherit;
+}
+
+.form-row {
+  display: flex;
+  gap: 1rem;
+}
+
+.form-row label {
+  flex: 1;
+}
+
+.checkboxes {
+  align-items: center;
+}
+
+.checkbox-label {
+  display: flex !important;
+  align-items: center;
+  gap: 0.4rem;
+}
+
+.checkbox-label input {
+  width: auto !important;
+  margin: 0 !important;
+}
+
+.form-actions {
+  display: flex;
+  gap: 0.5rem;
+  margin-top: 0.5rem;
+}
